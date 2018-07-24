@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 const client = new Discord.Client();   
 
+client.on('ready', () => {
+    client.user.setGame(`In ${client.guilds.size} Servers | use c.help`, "http://twitch.tv/Streammingg")	
+});
 
 client.on("message", message => {
 	var prefix = "c.";
